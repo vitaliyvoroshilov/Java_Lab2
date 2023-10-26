@@ -1,4 +1,4 @@
-package Lab2;
+package Lab23;
 
 public class MinuteClock {
     public int hour, minute;
@@ -18,12 +18,7 @@ public class MinuteClock {
         name = "name";
         price = 0.0;
     }
-    public String getName(){
-        return name;
-    }
-    public double getPrice(){
-        return price;
-    }
+
     public void setHour(int _hour){
         if (_hour < 0 || _hour > 24)
             throw new IllegalArgumentException();
@@ -33,5 +28,25 @@ public class MinuteClock {
         if (_minute < 0 || _minute > 60)
             throw new IllegalArgumentException();
         minute = _minute;
+    }
+
+    public String getName(){
+        return name;
+    }
+    public double getPrice(){
+        return price;
+    }
+    public int getHour()
+    {
+        return hour;
+    }
+    public int getMinute()
+    {
+        return minute;
+    }
+    @Override
+    public String toString()
+    {
+        return name + " " + price + " " + hour + ":" + minute;
     }
 }

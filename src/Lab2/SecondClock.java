@@ -1,6 +1,6 @@
-package Lab2;
+package Lab23;
 
-public class SecondClock extends MinuteClock{
+public class SecondClock extends MinuteClock implements getClock{
     public int second;
 
     public SecondClock(){
@@ -22,5 +22,15 @@ public class SecondClock extends MinuteClock{
         if (_second < 0 || _second > 60)
             throw new IllegalArgumentException();
         second = _second;
+    }
+
+    public int getSecond()
+    {
+        return second;
+    }
+    @Override
+    public String toString()
+    {
+        return name + " " + price + " " + hour + ":" + minute + ":" + second;
     }
 }
