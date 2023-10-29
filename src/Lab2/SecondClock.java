@@ -1,21 +1,21 @@
-package Lab23;
+package Lab2;
 
-public class SecondClock extends MinuteClock implements getClock{
+public class SecondClock extends MinuteClock{
     public int second;
 
     public SecondClock(){
         hour = minute = second = 0;
-        name = "name";
+        name = "emptyName";
         price = 0.0;
     }
-    public SecondClock (int _hour, int _minute, int _second){
+    public SecondClock (String _name, double _price, int _hour, int _minute, int _second){
+        name = _name;
+        price = _price;
         if (_hour < 0 || _hour > 24 || _minute < 0 || _minute > 60 || _second < 0 || _second > 60)
             throw new IllegalArgumentException();
         hour = _hour;
         minute = _minute;
         second = _second;
-        name = "name";
-        price = 0.0;
     }
 
     public void setSecond(int _second){
