@@ -1,6 +1,6 @@
 package Lab2;
 
-public class SecondClock extends MinuteClock{
+public class SecondClock extends MinuteClock implements IClock{
     public int second;
 
     public SecondClock(){

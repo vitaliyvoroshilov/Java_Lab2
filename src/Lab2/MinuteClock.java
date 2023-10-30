@@ -1,6 +1,6 @@
 package Lab2;
 
-public class MinuteClock {
+public class MinuteClock implements IClock {
     public int hour, minute;
     public String name;
     public double price;
@@ -29,6 +29,9 @@ public class MinuteClock {
             throw new IllegalArgumentException();
         minute = _minute;
     }
+    public void setSecond(int _second){
+
+    }
 
     public String getName(){
         return name;
@@ -43,6 +46,10 @@ public class MinuteClock {
     public int getMinute()
     {
         return minute;
+    }
+    public int getSecond()
+    {
+        return 0;
     }
     @Override
     public String toString()
