@@ -2,15 +2,15 @@ package Lab2;
 
 public interface IClock {
 
-    void setHour(int _hour);
-    void setMinute(int _minute);
-    void setSecond(int _second);
+    public void setHour(int _hour);
+    public void setMinute(int _minute);
+    public void setSecond(int _second);
 
-    String getName();
-    double getPrice();
-    int getHour();
-    int getMinute();
-    int getSecond();
+    public String getName();
+    public double getPrice();
+    public int getHour();
+    public int getMinute();
+    public int getSecond();
     @Override
     public String toString();
 }
